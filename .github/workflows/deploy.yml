@@ -1,0 +1,128 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: "24"
+  DEPLOY_HOST: "8.133.203.112"
+  DEPLOY_PORT: "22"
+  DEPLOY_PATH: "/opt/1panel/www/sites/jinanlinghang.com/index"
+  HEALTHCHECK_URL: "http://8.133.203.112/"
+
+jobs:
+  quality:
+    name: Lint and build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run lint
+        run: npm run lint
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Package build output
+        run: tar -czf site.tar.gz -C out .
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ github.sha }}
+          path: site.tar.gz
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Deploy production
+    needs: quality
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ env.HEALTHCHECK_URL }}
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-${{ github.sha }}
+
+      - name: Configure SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          test -n "$SSH_PRIVATE_KEY"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/deploy_key ~/.ssh/known_hosts
+
+      - name: Upload release
+        env:
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          test -n "$DEPLOY_USER"
+          scp -i ~/.ssh/deploy_key -P "$DEPLOY_PORT" \
+            site.tar.gz \
+            "$DEPLOY_USER@$DEPLOY_HOST:/tmp/jnlinghang-$GITHUB_SHA.tar.gz"
+
+      - name: Activate release
+        env:
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "$DEPLOY_PORT" \
+            "$DEPLOY_USER@$DEPLOY_HOST" \
+            bash -s -- "$DEPLOY_PATH" "$GITHUB_SHA" <<'REMOTE'
+          set -euo pipefail
+
+          target="$1"
+          sha="$2"
+          archive="/tmp/jnlinghang-${sha}.tar.gz"
+          release="${target}.release-${sha}"
+          previous="${target}.previous"
+
+          rollback() {
+            rm -rf "$release"
+            rm -f "$archive"
+            if [ ! -d "$target" ] && [ -d "$previous" ]; then
+              mv "$previous" "$target"
+            fi
+          }
+          trap rollback ERR
+
+          rm -rf "$release"
+          mkdir -p "$release"
+          tar -xzf "$archive" -C "$release"
+          rm -f "$archive"
+
+          rm -rf "$previous"
+          if [ -d "$target" ]; then
+            mv "$target" "$previous"
+          fi
+          mv "$release" "$target"
+          trap - ERR
+          REMOTE
+
+      - name: Verify deployment
+        run: curl --fail --silent --show-error --location --retry 5 --retry-delay 3 "$HEALTHCHECK_URL" > /dev/null

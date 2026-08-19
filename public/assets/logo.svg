@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="64" viewBox="0 0 360 64">
+<g fill="none">
+<path d="M8 40 L30 14 L38 40 Z" fill="#FFBF00"/>
+<path d="M30 14 L58 40 L38 40 Z" fill="#0F1B2E"/>
+<path d="M6 48 H60" stroke="#FFBF00" stroke-width="3" stroke-linecap="round"/>
+</g>
+<text x="76" y="30" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="25" font-weight="700" fill="#0F1B2E" letter-spacing="1">济南领航航空</text>
+<text x="77" y="50" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8A8F98" letter-spacing="1.05">JINAN NAVIGATION AVIATION TECH</text>
+</svg>
