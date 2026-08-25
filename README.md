@@ -15,11 +15,16 @@ npm run lint    # ESLint
 
 ## GitHub CI/CD
 
-推送到 `main` 后，[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 会依次执行依赖安装、ESLint、静态构建，并通过 SSH 发布到：
+推送到 `main` 后，[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 会依次执行依赖安装、ESLint、静态构建，并通过 SSH 发布到 production 环境配置的目标服务器。
 
-```text
-8.133.203.112:/opt/1panel/www/sites/jinanlinghang.com/index
-```
+在 GitHub 仓库的 `Settings > Environments > production > Environment variables` 中配置：
+
+| Variable | 说明 |
+| --- | --- |
+| `DEPLOY_HOST` | SSH 服务器域名或 IP 地址 |
+| `DEPLOY_PORT` | SSH 端口 |
+| `DEPLOY_PATH` | 站点发布目录的绝对路径 |
+| `HEALTHCHECK_URL` | 部署完成后的 HTTP(S) 健康检查地址 |
 
 在 GitHub 仓库的 `Settings > Environments > production > Environment secrets` 中配置：
 
@@ -27,9 +32,9 @@ npm run lint    # ESLint
 | --- | --- |
 | `DEPLOY_USER` | 可写入站点目录的 SSH 用户 |
 | `DEPLOY_SSH_KEY` | 对应用户的 SSH 私钥（完整多行内容） |
-| `DEPLOY_KNOWN_HOSTS` | 服务器 SSH 主机公钥记录，可在可信环境执行 `ssh-keyscan -H 8.133.203.112` 获取并核对指纹 |
+| `DEPLOY_KNOWN_HOSTS` | 服务器 SSH 主机公钥记录，可在可信环境执行 `ssh-keyscan -H DEPLOY_HOST` 获取并核对指纹 |
 
-首次部署前，将对应公钥加入服务器用户的 `~/.ssh/authorized_keys`，并确保该用户可以读写 `/opt/1panel/www/sites/jinanlinghang.com`。发布时会保留上一版目录 `index.previous`，可在服务器上用于快速回滚。
+首次部署前，将对应公钥加入服务器用户的 `~/.ssh/authorized_keys`，并确保该用户可以读写 `DEPLOY_PATH` 的父目录。发布时会在目标目录旁保留后缀为 `.previous` 的上一版本目录，用于快速回滚。
 
 ## 页面结构
 

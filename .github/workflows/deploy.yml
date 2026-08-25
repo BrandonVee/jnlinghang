@@ -14,10 +14,6 @@ permissions:
 
 env:
   NODE_VERSION: "24"
-  DEPLOY_HOST: "8.133.203.112"
-  DEPLOY_PORT: "22"
-  DEPLOY_PATH: "/opt/1panel/www/sites/jinanlinghang.com/index"
-  HEALTHCHECK_URL: "http://8.133.203.112/"
 
 jobs:
   quality:
@@ -59,7 +55,12 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: ${{ env.HEALTHCHECK_URL }}
+      url: ${{ vars.HEALTHCHECK_URL }}
+    env:
+      DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+      DEPLOY_PORT: ${{ vars.DEPLOY_PORT }}
+      DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}
+      HEALTHCHECK_URL: ${{ vars.HEALTHCHECK_URL }}
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
@@ -71,6 +72,10 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
           SSH_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
         run: |
+          test -n "$DEPLOY_HOST"
+          test -n "$DEPLOY_PORT"
+          test -n "$DEPLOY_PATH"
+          test -n "$HEALTHCHECK_URL"
           test -n "$SSH_PRIVATE_KEY"
           test -n "$SSH_KNOWN_HOSTS"
           install -m 700 -d ~/.ssh
