@@ -16,7 +16,7 @@ export const company = {
   scale: "小微企业",
   industry: "航空运输业 · 通用航空服务",
   registrar: "济南市章丘区市场监督管理局",
-  address: "山东省济南市章丘区明水街道查旧村环村路查旧社区101号",
+  address: "济南市章丘区明水街道济南领航航空无人机培训基地",
   phone: "13001720111",
   email: "13001720111@163.com",
 } as const;

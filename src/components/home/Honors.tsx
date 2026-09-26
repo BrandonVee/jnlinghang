@@ -105,9 +105,11 @@ export default function Honors({
             />
             <figcaption className="mt-4 text-center text-sm text-white/85">
               {list[active].title}
-              <span className="ml-3 text-xs text-white/45">
-                评级机构：国誉（山东）信用评估有限责任公司 · 有效期 2025.2.13-2028.2.12
-              </span>
+              {list[active].meta && (
+                <span className="ml-3 text-xs text-white/45">
+                  {list[active].meta}
+                </span>
+              )}
             </figcaption>
             <button
               type="button"
