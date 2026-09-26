@@ -14,6 +14,7 @@ export default function BrandLogo({ inverse = false, className = "" }: BrandLogo
         width={512}
         height={512}
         priority
+        unoptimized
         className="h-full w-auto shrink-0"
       />
       <span className="flex min-w-0 flex-col justify-center leading-none">
