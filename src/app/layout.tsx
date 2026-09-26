@@ -21,7 +21,10 @@ export const metadata: Metadata = {
     "紧急救援",
     "低空经济",
   ],
-  icons: { icon: "/assets/favicon.svg" },
+  icons: {
+    icon: "/assets/favicon.png",
+    apple: "/assets/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {

@@ -8,10 +8,7 @@ export type NewsItem = {
   body: string[];
 };
 
-/**
- * 示例内容，用于展示页面结构。
- * 接入 CMS 或后台后请替换为真实文章。
- */
+/** 公司新闻与行业动态 */
 export const news: NewsItem[] = [
   {
     slug: "low-altitude-economy",

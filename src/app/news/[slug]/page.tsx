@@ -76,12 +76,6 @@ export default async function NewsDetail(props: PageProps<"/news/[slug]">) {
             </div>
           </Reveal>
 
-          <Reveal delay={140}>
-            <p className="mt-10 rounded-xl bg-paper px-5 py-4 text-xs leading-relaxed text-muted">
-              本栏目内容为示例文稿，用于展示页面结构；正式上线前请替换为真实文章。
-            </p>
-          </Reveal>
-
           {/* 上一篇 / 下一篇 */}
           <Reveal delay={180}>
             <nav

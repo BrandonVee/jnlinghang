@@ -1,24 +1,9 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Reveal from "../Reveal";
 import { company } from "@/lib/company";
 import { stats } from "@/lib/home";
 
 export default function About() {
-  const [playing, setPlaying] = useState(false);
-
-  // 弹窗打开时支持 Esc 关闭
-  useEffect(() => {
-    if (!playing) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setPlaying(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [playing]);
-
   return (
     <section
       id="about"
@@ -63,7 +48,7 @@ export default function About() {
           </div>
         </Reveal>
 
-        {/* 图片 + 播放按钮 */}
+        {/* 公司形象图 */}
         <Reveal delay={200}>
           <div className="relative mt-14 aspect-[21/9] overflow-hidden rounded-3xl">
             <Image
@@ -75,64 +60,9 @@ export default function About() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent" />
-            <button
-              type="button"
-              onClick={() => setPlaying(true)}
-              aria-label="播放公司宣传片"
-              className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center transition-transform duration-300 hover:scale-110"
-            >
-              <Image
-                src="/assets/play.svg"
-                alt=""
-                width={80}
-                height={80}
-                unoptimized
-                className="h-full w-full"
-              />
-            </button>
           </div>
         </Reveal>
       </div>
-
-      {/* 视频弹窗：暂无片源时给出占位说明 */}
-      {playing && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="公司宣传片"
-          onClick={() => setPlaying(false)}
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 px-5 backdrop-blur-sm"
-        >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative aspect-video w-full max-w-3xl overflow-hidden rounded-2xl bg-ink"
-          >
-            <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
-              <p className="text-lg text-white/85">宣传片待上传</p>
-              <p className="max-w-sm text-sm text-white/45">
-                将视频文件放入 public/assets/ 后，替换本组件中的占位内容为 video
-                标签即可。
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={() => setPlaying(false)}
-              aria-label="关闭"
-              className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-gold hover:text-ink"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
