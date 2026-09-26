@@ -33,7 +33,7 @@ export default async function NewsDetail(props: PageProps<"/news/[slug]">) {
       <PageHero
         title={item.title}
         subtitle={item.tag}
-        image="/assets/hero-news.svg"
+        image="/assets/photos/news1.jpg"
         crumbs={[
           { label: "首页", href: "/" },
           { label: "新闻资讯", href: "/news" },

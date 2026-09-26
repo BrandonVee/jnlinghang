@@ -33,11 +33,13 @@ export default function About() {
       <div className="relative mx-auto w-full max-w-[1200px] px-5 lg:px-10">
         <Reveal>
           <div className="text-center">
-            <h2 className="text-[26px] font-bold leading-[1.6] text-ink/85 sm:text-3xl">
+            <p className="text-xs tracking-[0.32em] text-gold lg:text-[13px]">
+              OUR STORY
+            </p>
+            <h2 className="mt-4 text-[26px] font-bold leading-[1.6] text-ink/85 sm:text-3xl">
               <span className="text-gold text-[30px] sm:text-4xl">
-                深耕通航服务
-              </span>{" "}
-              培育飞行人才
+                我们的故事
+              </span>
             </h2>
             <p className="mx-auto mt-6 max-w-4xl text-sm leading-[1.9] text-ink/60 sm:text-base">
               {company.name}成立于 {company.foundedAt}
@@ -63,15 +65,16 @@ export default function About() {
 
         {/* 图片 + 播放按钮 */}
         <Reveal delay={200}>
-          <div className="relative mt-14 overflow-hidden rounded-3xl">
+          <div className="relative mt-14 aspect-[21/9] overflow-hidden rounded-3xl">
             <Image
-              src="/assets/intro.svg"
-              alt={`${company.shortName}训练基地`}
-              width={1200}
-              height={700}
+              src="/assets/photos/intro.jpg"
+              alt={`${company.shortName}低空航拍应用场景`}
+              fill
               unoptimized
-              className="h-auto w-full"
+              sizes="(max-width: 1024px) 100vw, 1200px"
+              className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent" />
             <button
               type="button"
               onClick={() => setPlaying(true)}

@@ -18,7 +18,7 @@ export const news: NewsItem[] = [
     title: "低空经济加速落地，通航服务迎来新机遇",
     date: "2026-07-20",
     tag: "行业动态",
-    image: "/assets/news1.svg",
+    image: "/assets/photos/news1.jpg",
     summary:
       "随着低空空域管理改革推进，通用航空在应急救援、巡检巡查、物流配送等场景的应用逐步扩大。",
     body: [
@@ -33,7 +33,7 @@ export const news: NewsItem[] = [
     title: "飞行培训体系建设：从理论到带飞的完整链路",
     date: "2026-07-13",
     tag: "公司新闻",
-    image: "/assets/news2.svg",
+    image: "/assets/photos/news2.jpg",
     summary:
       "培训不是单一环节，而是理论、模拟与实操层层递进的过程。本文梳理我们对培训链路的理解。",
     body: [
@@ -49,7 +49,7 @@ export const news: NewsItem[] = [
     title: "应急救援场景下的航空力量如何快速响应",
     date: "2026-07-10",
     tag: "行业动态",
-    image: "/assets/news3.svg",
+    image: "/assets/photos/news3.jpg",
     summary:
       "空中力量在灾害救援中的价值，很大程度取决于响应速度与空地协同的顺畅程度。",
     body: [

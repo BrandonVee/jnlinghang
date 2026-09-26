@@ -50,12 +50,13 @@ export default function Solutions() {
           {/* 左侧标题 */}
           <div className="lg:w-[38%] lg:shrink-0 lg:pr-16 xl:pr-24">
             <Reveal>
-              <h2 className="text-[26px] font-bold leading-[1.6] text-ink/85 sm:text-3xl">
+              <p className="text-xs tracking-[0.32em] text-gold lg:text-[13px]">
+                OUR SERVICE
+              </p>
+              <h2 className="mt-4 text-[26px] font-bold leading-[1.6] text-ink/85 sm:text-3xl">
                 <span className="text-gold text-[30px] sm:text-4xl">
-                  航空行业
+                  我们提供的服务
                 </span>
-                <br />
-                解决方案全景
               </h2>
               <p className="mt-5 text-base text-ink/70">
                 翱翔蓝天，掌控未来 —— 让专业航空能力服务千行百业

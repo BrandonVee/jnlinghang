@@ -26,13 +26,14 @@ export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden">
       <Image
-        src="/assets/cta-bg.svg"
+        src="/assets/photos/news1.jpg"
         alt=""
         fill
         unoptimized
         sizes="100vw"
         className="object-cover"
       />
+      <div className="absolute inset-0 bg-ink/70" />
 
       <div className="relative mx-auto w-full max-w-[1200px] px-5 py-20 lg:px-10 lg:py-28">
         <Reveal>

@@ -33,7 +33,7 @@ export default async function ServiceDetail(
         title={svc.title}
         subtitle={svc.subtitle}
         desc={svc.desc}
-        image="/assets/hero-services.svg"
+        image="/assets/photos/svc-general.jpg"
         crumbs={[
           { label: "首页", href: "/" },
           { label: "通航服务", href: "/services" },

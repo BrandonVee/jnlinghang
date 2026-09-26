@@ -19,7 +19,7 @@ export default function ServicesPage() {
         title="通航服务"
         subtitle="SERVICES"
         desc="以通用航空运营为核心，围绕作业飞行、应急救援、医疗转运与航空运输构建服务能力，为政企客户提供可落地的低空作业支持。"
-        image="/assets/hero-services.svg"
+        image="/assets/photos/svc-general.jpg"
         crumbs={[{ label: "首页", href: "/" }, { label: "通航服务" }]}
       />
 

@@ -33,7 +33,7 @@ export default async function SolutionDetail(
         title={sol.title}
         subtitle={sol.subtitle}
         desc={sol.desc}
-        image="/assets/hero-solutions.svg"
+        image="/assets/photos/banner4.jpg"
         crumbs={[
           { label: "首页", href: "/" },
           { label: "行业应用", href: "/solutions" },

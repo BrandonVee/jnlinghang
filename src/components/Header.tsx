@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import BrandLogo from "@/components/BrandLogo";
 import { company } from "@/lib/company";
 import { nav } from "@/lib/nav";
 
@@ -53,15 +53,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-5 lg:h-20 lg:px-10">
         <Link href="/" className="flex shrink-0 items-center" aria-label={company.name}>
-          <Image
-            src={light ? "/assets/logo.svg" : "/assets/logo-light.svg"}
-            alt={company.name}
-            width={360}
-            height={64}
-            priority
-            unoptimized
-            className="h-9 w-auto lg:h-11"
-          />
+          <BrandLogo inverse={!light} className="h-11 lg:h-12" />
         </Link>
 
         {/* 桌面端导航 */}

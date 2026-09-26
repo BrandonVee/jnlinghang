@@ -36,7 +36,7 @@ export default async function CourseDetail(
         title={course.title}
         subtitle={course.subtitle}
         desc={course.desc}
-        image="/assets/hero-training.svg"
+        image="/assets/photos/banner2.jpg"
         crumbs={[
           { label: "首页", href: "/" },
           { label: "飞行培训", href: "/training" },

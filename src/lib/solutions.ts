@@ -18,7 +18,7 @@ export const solutions: Solution[] = [
     title: "紧急救援解决方案",
     subtitle: "EMERGENCY RESCUE",
     desc: "以空中视角快速掌握现场态势，配合地面力量完成侦察、投送与支援，缩短救援响应时间。",
-    image: "/assets/sol-rescue.svg",
+    image: "/assets/photos/sol-rescue.jpg",
     value: [
       { title: "态势先知", desc: "航拍影像实时回传，指挥端快速判断现场情况。" },
       { title: "响应提速", desc: "空中通道不受地面交通限制，抵达速度更快。" },
@@ -32,7 +32,7 @@ export const solutions: Solution[] = [
     title: "医疗转运解决方案",
     subtitle: "MEDICAL TRANSFER",
     desc: "打通城际就医通道，为非急救转运提供规范、稳妥的过程管理与照护衔接。",
-    image: "/assets/sol-medical.svg",
+    image: "/assets/photos/sol-medical.jpg",
     value: [
       { title: "路线优化", desc: "结合距离与身体状况规划转运路线与节奏。" },
       { title: "全程照护", desc: "随行人员关注途中状态，及时调整安排。" },
@@ -46,7 +46,7 @@ export const solutions: Solution[] = [
     title: "测绘建模解决方案",
     subtitle: "SURVEY & MODELING",
     desc: "通过航空影像采集与三维重建，为规划设计、地质勘查与工程管理提供高精度空间数据。",
-    image: "/assets/sol-survey.svg",
+    image: "/assets/photos/sol-survey.jpg",
     value: [
       { title: "精度可控", desc: "按成果要求设计航高与重叠率，控制成图精度。" },
       { title: "效率提升", desc: "大范围区域快速覆盖，缩短外业周期。" },
@@ -60,7 +60,7 @@ export const solutions: Solution[] = [
     title: "影视航拍解决方案",
     subtitle: "AERIAL FILMING",
     desc: "为影视摄制、宣传片与活动记录提供航拍与后期支持，用空中镜头强化画面表达。",
-    image: "/assets/sol-film.svg",
+    image: "/assets/photos/sol-film.jpg",
     value: [
       { title: "镜头语言", desc: "根据脚本设计运镜方案，服务叙事需要。" },
       { title: "现场配合", desc: "与导演组协同，现场快速调整拍摄方案。" },
@@ -74,7 +74,7 @@ export const solutions: Solution[] = [
     title: "生态监测解决方案",
     subtitle: "ECOLOGY MONITORING",
     desc: "面向生态资源监测与森林管护需求，建立周期性空中巡查与数据比对机制。",
-    image: "/assets/sol-eco.svg",
+    image: "/assets/photos/sol-eco.jpg",
     value: [
       { title: "周期比对", desc: "定期采集同区域影像，识别变化趋势。" },
       { title: "覆盖全面", desc: "覆盖人力难以到达的区域，减少监测盲区。" },
@@ -88,7 +88,7 @@ export const solutions: Solution[] = [
     title: "气象与辐射监测",
     subtitle: "ENVIRONMENT SENSING",
     desc: "结合气象信息服务与辐射监测能力，为作业安全与环境评估提供空域环境感知支持。",
-    image: "/assets/sol-weather.svg",
+    image: "/assets/photos/sol-weather.jpg",
     value: [
       { title: "作业保障", desc: "作业前评估气象条件，降低飞行风险。" },
       { title: "数据支撑", desc: "采集环境数据，为评估与决策提供依据。" },
@@ -102,7 +102,7 @@ export const solutions: Solution[] = [
     title: "农林作业解决方案",
     subtitle: "AGRICULTURE",
     desc: "以农业机械服务与航空作业配合，提升农林生产环节的作业效率与覆盖均匀度。",
-    image: "/assets/sol-agri.svg",
+    image: "/assets/photos/sol-agri.jpg",
     value: [
       { title: "效率提升", desc: "大面积作业快速完成，抢抓农时。" },
       { title: "覆盖均匀", desc: "按航线均匀作业，减少重喷漏喷。" },

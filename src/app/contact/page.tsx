@@ -45,7 +45,7 @@ export default function ContactPage() {
         title="联系我们"
         subtitle="CONTACT"
         desc="告诉我们您的场景与目标，我们会结合实际情况给出可执行的建议。"
-        image="/assets/hero-contact.svg"
+        image="/assets/photos/intro.jpg"
         crumbs={[{ label: "首页", href: "/" }, { label: "联系我们" }]}
       />
 

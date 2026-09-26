@@ -1,0 +1,24 @@
+站点照片来源（Wikimedia Commons，均为自由许可图片，使用时请保留本文件以注明来源）：
+
+- banner1.jpg — 2001 Cessna 172S SkyHawk SP N5147J (5056422764).jpg — https://commons.wikimedia.org/wiki/File:2001_CESSNA_172S_SkyHawk_SP_N5147J_(172S9021)_(5056422764).jpg
+- banner2.jpg — Full Flight Simulator (5573438825).jpg — https://commons.wikimedia.org/wiki/File:Full_Flight_Simulator_(5573438825).jpg
+- banner3.jpg / svc-rescue.jpg — Coastguard Rescue Helicopter at Corbyn Head (1)/(2).jpg — https://commons.wikimedia.org/wiki/File:Coastguard_Rescue_Helicopter_at_Corbyn_Head_(1).jpg
+- banner4.jpg — Drone flying over hills (Unsplash).jpg — https://commons.wikimedia.org/wiki/File:Drone_flying_over_hills_(Unsplash).jpg
+- intro.jpg — 1 aerial yangshuo panorama 2017.jpg — https://commons.wikimedia.org/wiki/File:1_aerial_yangshuo_panorama_2017.jpg
+- sol-rescue.jpg — Firefighting in Stellenbosch 1.jpg — https://commons.wikimedia.org/wiki/File:Firefighting_in_Stellenbosch_1.jpg
+- sol-medical.jpg / svc-transfer.jpg — Sprinter ambulance outside Beijing Emergency Medical Center.jpg — https://commons.wikimedia.org/wiki/File:Sprinter_ambulance_outside_Beijing_Emergency_Medical_Center_(20201224153442).jpg
+- sol-survey.jpg — 2019-07-31 Lough Hyne 0828.jpg — https://commons.wikimedia.org/wiki/File:2019-07-31-Lough_Hyne-0828.jpg
+- sol-film.jpg — 2016-02-27 DJI Inspire inflight.jpg — https://commons.wikimedia.org/wiki/File:2016-02-27_DJI_Inspire_inflight.jpg
+- sol-eco.jpg — BLM drone training above Horning Seed Orchard (35179078385).jpg — https://commons.wikimedia.org/wiki/File:BLM_drone_training_above_Horning_Seed_Orchard_(35179078385).jpg
+- sol-weather.jpg — Meteorological instruments at the Seoul Weather Station.jpg — https://commons.wikimedia.org/wiki/File:Meteorological_instruments_at_the_Seoul_Weather_Station.jpg
+- sol-agri.jpg — Agricultural drone spraying on paddy field.jpg — https://commons.wikimedia.org/wiki/File:Agricultural_drone_spraying_on_paddy_field.jpg
+- svc-general.jpg — Australian Corporate Jet Centres (VH-WFE) Cessna 560 Citation Ultra...jpg — https://commons.wikimedia.org/wiki/File:Australian_Corporate_Jet_Centres_(VH-WFE)_Cessna_560_Citation_Ultra_parked_on_the_tarmac_at_Wagga_Wagga_Airport.jpg
+- svc-transport.jpg — UPS 767-300F freighter unloading at Boston April 2025.jpg — https://commons.wikimedia.org/wiki/File:UPS_767-300F_freighter_unloading_at_Boston_April_2025.jpg
+- course-pilot.jpg — VH-LSO Cessna 162 SkyCatcher (6809293880).jpg — https://commons.wikimedia.org/wiki/File:VH-LSO_Cessna_162_SkyCatcher_(6809293880).jpg
+- course-uav.jpg — Farmer Flying Drone (48766601332).jpg — https://commons.wikimedia.org/wiki/File:Farmer_Flying_Drone_(48766601332).jpg
+- course-maintenance.jpg — Airframe Mechanics Aircraft Skin Care DVIDS28138.jpg — https://commons.wikimedia.org/wiki/File:Airframe_Mechanics_Aircraft_Skin_Care_DVIDS28138.jpg
+- course-recurrent.jpg — NNPS Flight Simulator (33365284815).jpg — https://commons.wikimedia.org/wiki/File:NNPS_Flight_Simulator_(33365284815).jpg
+- news1.jpg — Quadcopter Drone in flight.jpg — https://commons.wikimedia.org/wiki/File:Quadcopter_Drone_in_flight.jpg
+- news2.jpg — Full Flight Simulator (5997843024).jpg — https://commons.wikimedia.org/wiki/File:Full_Flight_Simulator_(5997843024).jpg
+
+证书图片（public/assets/certs/）由公司提供的证书 PDF 与高清原图导出。

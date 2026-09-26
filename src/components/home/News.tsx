@@ -10,9 +10,13 @@ export default function News() {
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-xs tracking-[0.32em] text-gold">NEWS</p>
+              <p className="text-xs tracking-[0.32em] text-gold lg:text-[13px]">
+                NEWS
+              </p>
               <h2 className="mt-4 text-[26px] font-bold text-ink/85 sm:text-3xl">
-                新闻资讯
+                <span className="text-gold text-[30px] sm:text-4xl">
+                  新闻资讯
+                </span>
               </h2>
             </div>
             <Link

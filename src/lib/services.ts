@@ -15,7 +15,7 @@ export const services: Service[] = [
     code: "01",
     title: "通用航空服务",
     subtitle: "GENERAL AVIATION",
-    image: "/assets/svc-general.svg",
+    image: "/assets/photos/svc-general.jpg",
     desc: "以通用航空运营为核心，围绕作业飞行、空中服务与地面保障构建完整服务链路，为政企客户提供可落地的低空作业能力。",
     features: [
       { title: "作业飞行组织", desc: "依据任务目标制定航线与作业方案，统筹机组与设备调配。" },
@@ -30,7 +30,7 @@ export const services: Service[] = [
     code: "02",
     title: "紧急救援服务",
     subtitle: "EMERGENCY RESCUE",
-    image: "/assets/svc-rescue.svg",
+    image: "/assets/photos/svc-rescue.jpg",
     desc: "面向突发事件与自然灾害场景，提供空中侦察、物资投送与现场支援能力，帮助救援指挥快速掌握态势。",
     features: [
       { title: "快速响应", desc: "接到任务后按预案组织力量，缩短出动准备时间。" },
@@ -45,7 +45,7 @@ export const services: Service[] = [
     code: "03",
     title: "非急救转运服务",
     subtitle: "MEDICAL TRANSFER",
-    image: "/assets/svc-transfer.svg",
+    image: "/assets/photos/svc-transfer.jpg",
     desc: "为有转运需求的人群提供非急救医疗转运衔接服务，注重转运过程中的舒适性、规范性与全程照护。",
     features: [
       { title: "转运方案定制", desc: "结合出行距离与身体状况制定转运路线与照护方案。" },
@@ -60,7 +60,7 @@ export const services: Service[] = [
     code: "04",
     title: "公共航空运输",
     subtitle: "AIR TRANSPORT",
-    image: "/assets/svc-transport.svg",
+    image: "/assets/photos/svc-transport.jpg",
     desc: "围绕航空运输与货运代理业务，为客户提供运输组织、设备租赁与运力协调等一体化服务支持。",
     features: [
       { title: "运输组织", desc: "根据货物属性与时效要求安排运输方案。" },

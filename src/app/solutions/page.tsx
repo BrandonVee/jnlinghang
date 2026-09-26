@@ -19,7 +19,7 @@ export default function SolutionsPage() {
         title="行业应用"
         subtitle="SOLUTIONS"
         desc="航空技术已深入应急、医疗、测绘、影视、生态与农林等多个行业，带来高效、精准、低成本的作业方式。"
-        image="/assets/hero-solutions.svg"
+        image="/assets/photos/banner4.jpg"
         crumbs={[{ label: "首页", href: "/" }, { label: "行业应用" }]}
       />
 

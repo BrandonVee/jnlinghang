@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import { company } from "@/lib/company";
 import { nav } from "@/lib/nav";
 
@@ -13,14 +13,7 @@ export default function Footer() {
           {/* 品牌信息 */}
           <div className="lg:max-w-xs">
             <Link href="/" aria-label={company.name}>
-              <Image
-                src="/assets/logo-light.svg"
-                alt={company.name}
-                width={360}
-                height={64}
-                unoptimized
-                className="h-10 w-auto"
-              />
+              <BrandLogo inverse className="h-12" />
             </Link>
             <p className="mt-6 text-sm leading-[1.9]">
               以通用航空服务为核心，提供飞行培训、应急救援与低空行业应用的一体化能力。

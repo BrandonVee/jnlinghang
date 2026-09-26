@@ -3,6 +3,8 @@ import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
+import SectionHeading from "@/components/SectionHeading";
+import Honors from "@/components/home/Honors";
 import { businessScope, company, staff } from "@/lib/company";
 
 export const metadata: Metadata = {
@@ -33,7 +35,7 @@ export default function AboutPage() {
         title="关于我们"
         subtitle="ABOUT US"
         desc={`${company.name}成立于 ${company.foundedAt}，是一家以通用航空服务为核心的科技企业。`}
-        image="/assets/hero-about.svg"
+        image="/assets/photos/banner1.jpg"
         crumbs={[{ label: "首页", href: "/" }, { label: "关于我们" }]}
       />
 
@@ -67,8 +69,8 @@ export default function AboutPage() {
             <Reveal delay={120}>
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                 <Image
-                  src="/assets/intro.svg"
-                  alt={`${company.shortName}训练基地`}
+                  src="/assets/photos/intro.jpg"
+                  alt={`${company.shortName}低空航拍应用场景`}
                   fill
                   unoptimized
                   sizes="(max-width: 1024px) 100vw, 560px"
@@ -126,8 +128,22 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 荣誉资质 */}
+      <section id="honors" className="bg-white py-16 lg:py-24">
+        <div className="mx-auto w-full max-w-[1440px] px-5 lg:px-10">
+          <SectionHeading
+            kicker="OUR HONORS"
+            title="荣誉资质"
+            desc="公司信用管理体系经审查符合 Q/GYSD1113-2023 要求，获评系列 AAA 级信用荣誉，点击证书可查看大图。"
+          />
+          <div className="mt-12">
+            <Honors />
+          </div>
+        </div>
+      </section>
+
       {/* 经营范围 */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-paper py-16 lg:py-24">
         <div className="mx-auto w-full max-w-[1200px] px-5 lg:px-10">
           <Reveal>
             <p className="text-xs tracking-[0.32em] text-gold">SCOPE</p>

@@ -26,9 +26,13 @@ export default function Courses() {
       <div className="relative mx-auto w-full max-w-[1200px] px-5 lg:px-10">
         <Reveal>
           <div className="text-center">
-            <p className="text-xs tracking-[0.32em] text-gold">TRAINING</p>
+            <p className="text-xs tracking-[0.32em] text-gold lg:text-[13px]">
+              TRAINING
+            </p>
             <h2 className="mt-4 text-[26px] font-bold leading-[1.6] text-white sm:text-3xl">
-              培训课程体系
+              <span className="text-gold text-[30px] sm:text-4xl">
+                培训课程体系
+              </span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-[1.9] text-white/55">
               围绕许可经营范围开设飞行与机务方向课程，理论与实操结合，帮助学员完成从入门到持证上岗的能力建设。

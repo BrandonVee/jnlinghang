@@ -19,7 +19,7 @@ export default function TrainingPage() {
         title="飞行培训"
         subtitle="TRAINING"
         desc="围绕许可经营范围开设飞行与机务方向课程，理论、模拟与实操分阶段推进，帮助学员完成从入门到持证上岗的能力建设。"
-        image="/assets/hero-training.svg"
+        image="/assets/photos/banner2.jpg"
         crumbs={[{ label: "首页", href: "/" }, { label: "飞行培训" }]}
       />
 
